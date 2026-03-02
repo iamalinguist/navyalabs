@@ -14,9 +14,9 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
+        <SolutionsOverview />
         <Hero />
         <Differentiators />
-        <SolutionsOverview />
         <SolutionsDetailed />
         <Impact />
         <Process />

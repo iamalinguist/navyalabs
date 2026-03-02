@@ -1,6 +1,6 @@
 import {
   Users, UserPlus, FileUp, ListChecks, Award, Banknote, LayoutDashboard, MonitorSmartphone,
-  CalendarCheck, GraduationCap, Clock, Home, Truck, Badge as IdCardIcon, BookUser,
+  CalendarCheck, GraduationCap, Clock, Home, Truck, IdCard, BookUser,
   Presentation, FileText, Mail, Ticket, QrCode, Book, FileArchive,
   FilePenLine, Database, Laptop, ClipboardEdit, Calculator, ShieldCheck,
   FolderKanban, Target, BarChart3, FilePieChart, BookCopy,
@@ -12,6 +12,8 @@ import {
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const solutionCategories = [
     {
@@ -40,7 +42,7 @@ const solutionCategories = [
             { icon: BookUser, text: "Staff management" },
             { icon: Home, text: "Hostel management" },
             { icon: Truck, text: "Transport tracking" },
-            { icon: IdCardIcon, text: "ID card generation" },
+            { icon: IdCard, text: "ID card generation" },
             { icon: Users, text: "Student information systems" },
         ]
     },
@@ -161,15 +163,17 @@ export function SolutionsDetailed() {
                 <Tabs defaultValue="admissions" className="flex flex-col md:flex-row gap-8 lg:gap-12">
                     <TabsList className="flex md:flex-col h-auto justify-start items-stretch w-full md:w-1/3 lg:w-1/4 bg-transparent p-0 overflow-x-auto md:overflow-x-visible">
                         {solutionCategories.map(category => (
-                            <TabsTrigger key={category.id} value={category.id} className="justify-start gap-3 p-4 text-base data-[state=active]:bg-primary/10 data-[state=active]:shadow-none data-[state=active]:text-primary font-medium flex-shrink-0">
-                                <category.icon className="w-5 h-5" />
+                            <TabsTrigger key={category.id} value={category.id} className="flex items-start text-left justify-start gap-3 p-4 text-base data-[state=active]:bg-primary/10 data-[state=active]:shadow-none data-[state=active]:text-primary font-medium flex-shrink-0 h-full">
+                                <category.icon className="w-5 h-5 flex-shrink-0 mt-1" />
                                 {category.title}
                             </TabsTrigger>
                         ))}
                     </TabsList>
 
                     <div className="flex-1">
-                        {solutionCategories.map(category => (
+                        {solutionCategories.map(category => {
+                            const image = PlaceHolderImages.find(p => p.id === `solution-${category.id}`);
+                            return (
                             <TabsContent key={category.id} value={category.id} className="m-0">
                                 <Card className="shadow-lg border-primary/20">
                                     <CardHeader>
@@ -179,18 +183,31 @@ export function SolutionsDetailed() {
                                         </CardTitle>
                                     </CardHeader>
                                     <CardContent>
-                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-                                            {category.features.map(feature => (
-                                                <li key={feature.text} className="flex items-center gap-3">
-                                                    <feature.icon className="w-5 h-5 text-accent" />
-                                                    <span className="text-muted-foreground text-base">{feature.text}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <div className="grid md:grid-cols-2 gap-8 items-start">
+                                            <ul className="grid grid-cols-1 gap-y-4">
+                                                {category.features.map(feature => (
+                                                    <li key={feature.text} className="flex items-start gap-3">
+                                                        <feature.icon className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                                                        <span className="text-muted-foreground text-base">{feature.text}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                            {image && (
+                                                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border self-center">
+                                                    <Image
+                                                        src={image.imageUrl}
+                                                        alt={image.description}
+                                                        fill
+                                                        className="object-cover"
+                                                        data-ai-hint={image.imageHint}
+                                                    />
+                                                </div>
+                                            )}
+                                        </div>
                                     </CardContent>
                                 </Card>
                             </TabsContent>
-                        ))}
+                        )})}
                     </div>
                 </Tabs>
             </div>

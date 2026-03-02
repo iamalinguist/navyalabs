@@ -17,6 +17,66 @@
       "description": "Professional headshot of Dinesh Rathod.",
       "imageUrl": "https://images.unsplash.com/photo-1652471943570-f3590a4e52ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdHxlbnwwfHx8fDE3NzIzODMyMDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional headshot"
+    },
+    {
+      "id": "solution-admissions",
+      "description": "A streamlined admissions portal dashboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1771923082503-0a3381c46cef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkYXNoYm9hcmQlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzcyMzg1NzMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dashboard interface"
+    },
+    {
+      "id": "solution-erp",
+      "description": "An integrated ERP system for a college.",
+      "imageUrl": "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxFUlAlMjBzeXN0ZW18ZW58MHx8fHwxNzcyNDI4MjEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ERP system"
+    },
+    {
+      "id": "solution-conference",
+      "description": "A website for an academic conference.",
+      "imageUrl": "https://images.unsplash.com/photo-1723002312141-027f132f62de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25mZXJlbmNlJTIwd2Vic2l0ZXxlbnwwfHx8fDE3NzI0MjgyMTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "conference website"
+    },
+    {
+      "id": "solution-exams",
+      "description": "An online examination platform.",
+      "imageUrl": "https://images.unsplash.com/photo-1513258496099-48168024aec0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvbmxpbmUlMjBleGFtfGVufDB8fHx8MTc3MjQyODIxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "online exam"
+    },
+    {
+      "id": "solution-accreditation",
+      "description": "A dashboard for tracking accreditation data.",
+      "imageUrl": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGF0YSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzI0MjQ2NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data dashboard"
+    },
+    {
+      "id": "solution-learning",
+      "description": "A learning management system interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1591381287254-b3349c60bf9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxMTVMlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzcyNDI4MjExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "LMS interface"
+    },
+    {
+      "id": "solution-research",
+      "description": "A platform for managing faculty research.",
+      "imageUrl": "https://images.unsplash.com/photo-1761223976145-a85ffe11fc57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXNlYXJjaCUyMHBsYXRmb3JtfGVufDB8fHx8MTc3MjQyODIxMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "research platform"
+    },
+    {
+      "id": "solution-websites",
+      "description": "A modern university website design.",
+      "imageUrl": "https://images.unsplash.com/photo-1641444473327-ea736547d7bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx1bml2ZXJzaXR5JTIwd2Vic2l0ZXxlbnwwfHx8fDE3NzI0MjgyMTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "university website"
+    },
+    {
+      "id": "solution-mobile",
+      "description": "A campus mobile app interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzcyMzM2MjY0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "solution-custom",
+      "description": "A custom workflow automation tool.",
+      "imageUrl": "https://images.unsplash.com/photo-1542744094-24638eff58bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b3JrZmxvdyUyMGF1dG9tYXRpb258ZW58MHx8fHwxNzcyMzg3NzI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "workflow automation"
     }
   ]
 }
