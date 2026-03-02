@@ -50,7 +50,7 @@ const solutionCategories = [
         id: "research",
         title: "Research & Faculty Management",
         icon: FlaskConical,
-        sampleWorkUrl: "",
+        sampleWorkUrl: "/demos/research",
         isExternal: false,
         features: [
             { text: "Faculty profile platforms" },
@@ -65,7 +65,7 @@ const solutionCategories = [
         id: "websites",
         title: "Institutional Websites",
         icon: Globe,
-        sampleWorkUrl: "",
+        sampleWorkUrl: "/demos/university",
         isExternal: false,
         features: [
             { text: "Modern responsive websites" },
@@ -80,7 +80,7 @@ const solutionCategories = [
         id: "mobile",
         title: "Campus Mobile Apps",
         icon: MonitorSmartphone,
-        sampleWorkUrl: "",
+        sampleWorkUrl: "/demos/mobile-app",
         isExternal: false,
         features: [
             { text: "Attendance access" },
@@ -96,7 +96,7 @@ const solutionCategories = [
         id: "exams",
         title: "Examination Solutions",
         icon: FilePenLine,
-        sampleWorkUrl: "",
+        sampleWorkUrl: "/demos/exam-solution",
         isExternal: false,
         features: [
             { text: "Internal exam management" },
@@ -112,7 +112,7 @@ const solutionCategories = [
         id: "custom",
         title: "Custom Automation and AI",
         icon: Wrench,
-        sampleWorkUrl: "",
+        sampleWorkUrl: "/demos/custom-automation",
         isExternal: false,
         features: [
             { text: "Workflow automation" },
@@ -130,9 +130,9 @@ export function SolutionsDetailed() {
         <section id="solutions" className="py-16 sm:py-24">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-4xl mx-auto mb-16">
-                    <h1 className="text-3xl tracking-tight text-foreground sm:text-4xl font-bold">
+                    <h2 className="text-3xl tracking-tight text-foreground sm:text-4xl font-bold">
                         An End-to-End Academic Technology Provider
-                    </h1>
+                    </h2>
                     <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
                         From admissions to accreditation, Navya Labs offers a comprehensive suite of modular and integrated solutions to digitize your entire institution.
                     </p>
@@ -167,7 +167,7 @@ export function SolutionsDetailed() {
                                             {category.sampleWorkUrl ? (
                                                 <Button asChild>
                                                     <Link href={category.sampleWorkUrl} target={category.isExternal ? "_blank" : "_self"} rel={category.isExternal ? "noopener noreferrer" : ""}>
-                                                        View Sample Work {category.isExternal && <ExternalLink />}
+                                                        View Sample Work {category.isExternal && <ExternalLink className="ml-2" />}
                                                     </Link>
                                                 </Button>
                                             ) : (
