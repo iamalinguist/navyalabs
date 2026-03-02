@@ -24,7 +24,7 @@ export function Footer() {
                     <div>
                         <h3 className="font-semibold text-foreground mb-4">Contact Us</h3>
                         <div className="space-y-2 text-muted-foreground">
-                            <p>For general queries, contact Vivek Tripathi:</p>
+                            <p>For general queries:</p>
                             <p>Email: <a href="mailto:sopan.tripathi@gmail.com" className="hover:text-primary">sopan.tripathi@gmail.com</a></p>
                             <p>Phone: <a href="tel:7987876701" className="hover:text-primary">7987876701</a></p>
                             <div className="flex space-x-4 mt-4">

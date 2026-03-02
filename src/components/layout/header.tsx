@@ -11,7 +11,6 @@ import { ContactForm } from "@/components/contact-form";
 
 const navLinks = [
   { href: '#solutions', label: 'Solutions' },
-  { href: '#process', label: 'Process' },
   { href: '#leadership', label: 'Leadership' },
   { href: '#why-us', label: 'Why Navya' },
 ];
