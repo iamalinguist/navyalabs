@@ -8,19 +8,21 @@ import {
   Library, UserCog, TrendingUp, FlaskConical, CircleDollarSign, Microscope,
   Globe, Fingerprint, Search, Languages, Route,
   Bell, List, CreditCard, UserSquare,
-  Wrench, GitBranch, DatabaseZap, FileCheck2, BarChartHorizontal
+  Wrench, GitBranch, DatabaseZap, FileCheck2, BarChartHorizontal, ExternalLink
 } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 import { Separator } from '@/components/ui/separator';
 import React from 'react';
+import { Button } from '@/components/ui/button';
 
 const solutionCategories = [
     {
         id: "admissions",
         title: "Admissions & Student Lifecycle",
         icon: Users,
+        sampleWorkUrl: "",
         features: [
             { icon: UserPlus, text: "Online application portals" },
             { icon: FileUp, text: "Document upload & verification" },
@@ -35,6 +37,7 @@ const solutionCategories = [
         id: "erp",
         title: "Modular College ERP",
         icon: GraduationCap,
+        sampleWorkUrl: "",
         features: [
             { icon: CalendarCheck, text: "Attendance management" },
             { icon: ClipboardEdit, text: "Internal marks & grading" },
@@ -51,6 +54,7 @@ const solutionCategories = [
         id: "conference",
         title: "Conference Management",
         icon: Presentation,
+        sampleWorkUrl: "https://facultyideas.web.app/",
         features: [
             { icon: Globe, text: "Academic conference websites" },
             { icon: FileText, text: "Paper submission & review workflows" },
@@ -66,6 +70,7 @@ const solutionCategories = [
         id: "exams",
         title: "Examination Solutions",
         icon: FilePenLine,
+        sampleWorkUrl: "",
         features: [
             { icon: ClipboardEdit, text: "Internal exam management" },
             { icon: Database, text: "Question bank systems" },
@@ -80,6 +85,7 @@ const solutionCategories = [
         id: "accreditation",
         title: "Accreditation (NAAC/NBA)",
         icon: ShieldCheck,
+        sampleWorkUrl: "",
         features: [
             { icon: FolderKanban, text: "Criterion-wise document repositories" },
             { icon: Target, text: "Evidence tracking" },
@@ -93,6 +99,7 @@ const solutionCategories = [
         id: "learning",
         title: "Learning & Teaching Support",
         icon: Library,
+        sampleWorkUrl: "",
         features: [
             { icon: Layers, text: "Lightweight LMS platforms" },
             { icon: UploadCloud, text: "Assignment submission portals" },
@@ -106,6 +113,7 @@ const solutionCategories = [
         id: "research",
         title: "Research & Faculty Management",
         icon: FlaskConical,
+        sampleWorkUrl: "",
         features: [
             { icon: UserCog, text: "Faculty profile platforms" },
             { icon: Book, text: "Publication tracking" },
@@ -119,6 +127,7 @@ const solutionCategories = [
         id: "websites",
         title: "Institutional Websites",
         icon: Globe,
+        sampleWorkUrl: "",
         features: [
             { icon: MonitorSmartphone, text: "Modern responsive websites" },
             { icon: Library, text: "Department microsites" },
@@ -132,6 +141,7 @@ const solutionCategories = [
         id: "mobile",
         title: "Campus Mobile Apps",
         icon: MonitorSmartphone,
+        sampleWorkUrl: "",
         features: [
             { icon: CalendarCheck, text: "Attendance access" },
             { icon: Clock, text: "Timetables" },
@@ -146,6 +156,7 @@ const solutionCategories = [
         id: "custom",
         title: "Custom Automation",
         icon: Wrench,
+        sampleWorkUrl: "",
         features: [
             { icon: GitBranch, text: "Workflow automation" },
             { icon: DatabaseZap, text: "Data migration from legacy systems" },
@@ -195,6 +206,19 @@ export function SolutionsDetailed() {
                                                 </li>
                                             ))}
                                         </ul>
+                                        <div className="mt-6">
+                                            {category.sampleWorkUrl ? (
+                                                <Button asChild variant="outline">
+                                                    <a href={category.sampleWorkUrl} target="_blank" rel="noopener noreferrer">
+                                                        Sample Work <ExternalLink />
+                                                    </a>
+                                                </Button>
+                                            ) : (
+                                                <Button variant="outline" disabled>
+                                                    Sample Work
+                                                </Button>
+                                            )}
+                                        </div>
                                     </div>
                                     
                                     <div className={cn('md:col-span-2 relative aspect-square rounded-lg overflow-hidden border shadow-lg', isReversed && 'md:order-first')}>
