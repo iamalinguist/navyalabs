@@ -160,7 +160,7 @@ export function SolutionsDetailed() {
         <section id="solutions" className="py-16 sm:py-24">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-4xl mx-auto mb-16">
-                    <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">
+                    <h1 className="text-3xl tracking-tight text-foreground sm:text-4xl font-bold">
                         An End-to-End Academic Technology Provider
                     </h1>
                     <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -174,8 +174,8 @@ export function SolutionsDetailed() {
                         const isReversed = index % 2 !== 0;
 
                         return (
-                            <div key={category.id} className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
-                                <div className={cn(isReversed && 'md:order-last')}>
+                            <div key={category.id} className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-16 items-center">
+                                <div className={cn("md:col-span-3", isReversed && 'md:order-last')}>
                                     <div className="flex items-center gap-4 mb-4">
                                         <div className="bg-primary/10 p-3 rounded-full">
                                             <category.icon className="w-7 h-7 text-primary" />
@@ -193,7 +193,7 @@ export function SolutionsDetailed() {
                                     </ul>
                                 </div>
                                 
-                                <div className={cn('relative aspect-[5/4] rounded-lg overflow-hidden border shadow-lg', isReversed && 'md:order-first')}>
+                                <div className={cn('md:col-span-2 relative aspect-square rounded-lg overflow-hidden border shadow-lg', isReversed && 'md:order-first')}>
                                     {image ? (
                                         <Image
                                             src={image.imageUrl}
