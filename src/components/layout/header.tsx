@@ -6,8 +6,6 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from '@/components/logo';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from "@/components/ui/dialog";
-import { ContactForm } from "@/components/contact-form";
 
 const navLinks = [
   { href: '#solutions', label: 'Solutions' },
@@ -36,20 +34,9 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2 sm:gap-4">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button>Request a Demo</Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle>Request a Demo</DialogTitle>
-                <DialogDescription>
-                  Fill out the form below and we'll get in touch to schedule a demo.
-                </DialogDescription>
-              </DialogHeader>
-              <ContactForm />
-            </DialogContent>
-          </Dialog>
+          <Button asChild>
+            <Link href="#contact">Request a Demo</Link>
+          </Button>
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
