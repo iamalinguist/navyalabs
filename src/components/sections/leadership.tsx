@@ -13,12 +13,10 @@ const leadershipProfiles = [
     phone: '7987876701'
   },
   {
-    name: 'Mr. Dinesh Rathod',
+    name: 'Mr. Esh Rathod',
     title: 'Co-Founder & CTO',
-    image: PlaceHolderImages.find(p => p.id === 'dinesh-rathod'),
+    image: PlaceHolderImages.find(p => p.id === 'esh-rathod'),
     bio: 'Alumnus of IIT Bombay. Specializes in technology architecture and large-scale platform development. He leads product design, technical innovation, and system reliability, building secure, enterprise-grade solutions.',
-    email: '7rathod7@gmail.com',
-    phone: '7045800407'
   }
 ];
 
@@ -52,17 +50,19 @@ export function Leadership() {
                     <div className="text-center sm:text-left">
                         <CardTitle className="text-2xl">{profile.name}</CardTitle>
                         <CardDescription className="text-primary font-medium">{profile.title}</CardDescription>
-                         <div className="flex gap-4 mt-3 justify-center sm:justify-start">
-                            <a href={`mailto:${profile.email}`} aria-label={`${profile.name}'s Email`} className="text-muted-foreground hover:text-primary transition-colors">
-                               <Mail className="w-5 h-5"/>
-                            </a>
-                            <a href={`tel:${profile.phone}`} aria-label={`${profile.name}'s Phone`} className="text-muted-foreground hover:text-primary transition-colors">
-                               <Phone className="w-5 h-5"/>
-                            </a>
-                            <a href="#" aria-label={`${profile.name} on LinkedIn`} className="text-muted-foreground hover:text-primary transition-colors">
-                               <Linkedin className="w-5 h-5"/>
-                            </a>
-                         </div>
+                         {profile.email && profile.phone && (
+                            <div className="flex gap-4 mt-3 justify-center sm:justify-start">
+                                <a href={`mailto:${profile.email}`} aria-label={`${profile.name}'s Email`} className="text-muted-foreground hover:text-primary transition-colors">
+                                   <Mail className="w-5 h-5"/>
+                                </a>
+                                <a href={`tel:${profile.phone}`} aria-label={`${profile.name}'s Phone`} className="text-muted-foreground hover:text-primary transition-colors">
+                                   <Phone className="w-5 h-5"/>
+                                </a>
+                                <a href="#" aria-label={`${profile.name} on LinkedIn`} className="text-muted-foreground hover:text-primary transition-colors">
+                                   <Linkedin className="w-5 h-5"/>
+                                </a>
+                            </div>
+                         )}
                     </div>
                 </CardHeader>
                 <CardContent className="p-6 pt-0">
@@ -74,7 +74,7 @@ export function Leadership() {
         <div className="max-w-3xl mx-auto text-center border-t border-border pt-8">
             <h3 className="font-semibold text-lg text-foreground">A Trusted Institutional Partner</h3>
             <p className="mt-2 text-muted-foreground">
-                Navya Labs is a trustee and recognized partner of the MIS Group of IIT (BHU) Varanasi, reflecting strong academic collaboration and institutional trust.
+                Navya Labs is a trustee and recognized partner of the <a href="https://makeindiascientific.org/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">MIS Group of IIT (BHU) Varanasi</a>, reflecting strong academic collaboration and institutional trust.
             </p>
         </div>
       </div>
