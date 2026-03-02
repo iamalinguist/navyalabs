@@ -10,8 +10,8 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <SolutionsDetailed />
-        <Differentiators />
         <Leadership />
+        <Differentiators />
       </main>
       <Footer />
     </div>
