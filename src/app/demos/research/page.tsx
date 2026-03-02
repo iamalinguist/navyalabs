@@ -238,14 +238,26 @@ export default function ResearchDashboardPage() {
                   Latest research from our faculty.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                 {recentPublications.map((pub, index) => (
-                    <div key={index}>
-                      <h4 className="font-semibold">{pub.title}</h4>
-                      <p className="text-sm text-muted-foreground">{pub.authors}</p>
-                      <p className="text-xs text-muted-foreground">{pub.journal} - {pub.date}</p>
-                    </div>
-                ))}
+              <CardContent>
+                 <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Publication</TableHead>
+                      <TableHead className="text-right">Date</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {recentPublications.map((pub, index) => (
+                      <TableRow key={index}>
+                        <TableCell>
+                          <div className="font-medium">{pub.title}</div>
+                          <div className="text-sm text-muted-foreground">{pub.authors} - <i>{pub.journal}</i></div>
+                        </TableCell>
+                        <TableCell className="text-right text-muted-foreground">{pub.date}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
               </CardContent>
             </Card>
           </div>
