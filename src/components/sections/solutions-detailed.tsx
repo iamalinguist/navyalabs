@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils';
 import { Separator } from '@/components/ui/separator';
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const solutionCategories = [
     {
@@ -15,6 +16,7 @@ const solutionCategories = [
         title: "Conference Management",
         icon: Presentation,
         sampleWorkUrl: "https://facultyideas.web.app/",
+        isExternal: true,
         features: [
             { text: "Academic conference websites" },
             { text: "Paper submission & review workflows" },
@@ -30,7 +32,8 @@ const solutionCategories = [
         id: "erp",
         title: "Modular College ERP",
         icon: GraduationCap,
-        sampleWorkUrl: "",
+        sampleWorkUrl: "/demos/erp",
+        isExternal: false,
         features: [
             { text: "Attendance management" },
             { text: "Internal marks & grading" },
@@ -48,6 +51,7 @@ const solutionCategories = [
         title: "Research & Faculty Management",
         icon: FlaskConical,
         sampleWorkUrl: "",
+        isExternal: false,
         features: [
             { text: "Faculty profile platforms" },
             { text: "Publication tracking" },
@@ -62,6 +66,7 @@ const solutionCategories = [
         title: "Institutional Websites",
         icon: Globe,
         sampleWorkUrl: "",
+        isExternal: false,
         features: [
             { text: "Modern responsive websites" },
             { text: "Department microsites" },
@@ -76,6 +81,7 @@ const solutionCategories = [
         title: "Campus Mobile Apps",
         icon: MonitorSmartphone,
         sampleWorkUrl: "",
+        isExternal: false,
         features: [
             { text: "Attendance access" },
             { text: "Timetables" },
@@ -91,6 +97,7 @@ const solutionCategories = [
         title: "Examination Solutions",
         icon: FilePenLine,
         sampleWorkUrl: "",
+        isExternal: false,
         features: [
             { text: "Internal exam management" },
             { text: "Question bank systems" },
@@ -106,6 +113,7 @@ const solutionCategories = [
         title: "Custom Automation and AI",
         icon: Wrench,
         sampleWorkUrl: "",
+        isExternal: false,
         features: [
             { text: "Workflow automation" },
             { text: "Data migration from legacy systems" },
@@ -158,9 +166,9 @@ export function SolutionsDetailed() {
                                         <div className="mt-8 text-center">
                                             {category.sampleWorkUrl ? (
                                                 <Button asChild>
-                                                    <a href={category.sampleWorkUrl} target="_blank" rel="noopener noreferrer">
-                                                        View Sample Work <ExternalLink />
-                                                    </a>
+                                                    <Link href={category.sampleWorkUrl} target={category.isExternal ? "_blank" : "_self"} rel={category.isExternal ? "noopener noreferrer" : ""}>
+                                                        View Sample Work {category.isExternal && <ExternalLink />}
+                                                    </Link>
                                                 </Button>
                                             ) : (
                                                 <Button variant="outline" disabled>
