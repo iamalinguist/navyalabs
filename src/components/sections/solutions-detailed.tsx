@@ -1,14 +1,6 @@
 import {
-  Users, UserPlus, FileUp, ListChecks, Award, Banknote, LayoutDashboard, MonitorSmartphone,
-  CalendarCheck, GraduationCap, Clock, Home, Truck, IdCard, BookUser,
-  Presentation, FileText, Mail, Ticket, QrCode, Book, FileArchive,
-  FilePenLine, Database, Laptop, ClipboardEdit, Calculator, ShieldCheck,
-  FolderKanban, Target, BarChart3, FilePieChart, BookCopy,
-  Layers, UploadCloud, Link2,
-  Library, UserCog, TrendingUp, FlaskConical, CircleDollarSign, Microscope,
-  Globe, Fingerprint, Search, Languages, Route,
-  Bell, List, CreditCard, UserSquare,
-  Wrench, GitBranch, DatabaseZap, FileCheck2, BarChartHorizontal, ExternalLink
+  Presentation, GraduationCap, FlaskConical, Globe, MonitorSmartphone, FilePenLine,
+  Wrench, ExternalLink
 } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -18,38 +10,6 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 
 const solutionCategories = [
-    {
-        id: "admissions",
-        title: "Admissions & Student Lifecycle",
-        icon: Users,
-        sampleWorkUrl: "",
-        features: [
-            { text: "Online application portals" },
-            { text: "Document upload & verification" },
-            { text: "Merit list generation" },
-            { text: "Counseling and seat allocation" },
-            { text: "Fee payment integration" },
-            { text: "Student onboarding dashboards" },
-            { text: "Multi-program admission handling" },
-        ]
-    },
-    {
-        id: "erp",
-        title: "Modular College ERP",
-        icon: GraduationCap,
-        sampleWorkUrl: "",
-        features: [
-            { text: "Attendance management" },
-            { text: "Internal marks & grading" },
-            { text: "Timetable scheduling" },
-            { text: "Fee management" },
-            { text: "Staff management" },
-            { text: "Hostel management" },
-            { text: "Transport tracking" },
-            { text: "ID card generation" },
-            { text: "Student information systems" },
-        ]
-    },
     {
         id: "conference",
         title: "Conference Management",
@@ -67,46 +27,20 @@ const solutionCategories = [
         ]
     },
     {
-        id: "exams",
-        title: "Examination Solutions",
-        icon: FilePenLine,
+        id: "erp",
+        title: "Modular College ERP",
+        icon: GraduationCap,
         sampleWorkUrl: "",
         features: [
-            { text: "Internal exam management" },
-            { text: "Question bank systems" },
-            { text: "Online examinations" },
-            { text: "Marks entry portals" },
-            { text: "Result processing automation" },
-            { text: "Hall ticket generation" },
-            { text: "Grade cards & OMR integration" },
-        ]
-    },
-    {
-        id: "accreditation",
-        title: "Accreditation (NAAC/NBA)",
-        icon: ShieldCheck,
-        sampleWorkUrl: "",
-        features: [
-            { text: "Criterion-wise document repositories" },
-            { text: "Evidence tracking" },
-            { text: "Data analytics dashboards" },
-            { text: "Annual report generation" },
-            { text: "Self-study report support" },
-            { text: "Compliance monitoring tools" },
-        ]
-    },
-    {
-        id: "learning",
-        title: "Learning & Teaching Support",
-        icon: Library,
-        sampleWorkUrl: "",
-        features: [
-            { text: "Lightweight LMS platforms" },
-            { text: "Assignment submission portals" },
-            { text: "Faculty resource repositories" },
-            { text: "Course outcome tracking" },
-            { text: "Lecture capture systems" },
-            { text: "Integration with existing LMS" },
+            { text: "Attendance management" },
+            { text: "Internal marks & grading" },
+            { text: "Timetable scheduling" },
+            { text: "Fee management" },
+            { text: "Staff management" },
+            { text: "Hostel management" },
+            { text: "Transport tracking" },
+            { text: "ID card generation" },
+            { text: "Student information systems" },
         ]
     },
     {
@@ -153,8 +87,23 @@ const solutionCategories = [
         ]
     },
     {
+        id: "exams",
+        title: "Examination Solutions",
+        icon: FilePenLine,
+        sampleWorkUrl: "",
+        features: [
+            { text: "Internal exam management" },
+            { text: "Question bank systems" },
+            { text: "Online examinations" },
+            { text: "Marks entry portals" },
+            { text: "Result processing automation" },
+            { text: "Hall ticket generation" },
+            { text: "Grade cards & OMR integration" },
+        ]
+    },
+    {
         id: "custom",
-        title: "Custom Automation",
+        title: "Custom Automation and AI",
         icon: Wrench,
         sampleWorkUrl: "",
         features: [
