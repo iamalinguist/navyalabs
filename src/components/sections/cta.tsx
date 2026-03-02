@@ -16,11 +16,11 @@ export function Cta() {
           <div className="mt-8">
             <Dialog>
               <DialogTrigger asChild>
-                <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90">Request a Consultation</Button>
+                <Button size="lg" variant="secondary" className="bg-background text-foreground hover:bg-background/90">Request a Demo</Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[425px]">
                 <DialogHeader>
-                  <DialogTitle>Request a Consultation</DialogTitle>
+                  <DialogTitle>Request a Demo</DialogTitle>
                   <DialogDescription>
                     Fill out the form below and our experts will contact you to schedule a meeting.
                   </DialogDescription>
