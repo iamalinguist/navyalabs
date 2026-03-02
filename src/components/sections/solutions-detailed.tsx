@@ -10,8 +10,12 @@ import {
   Bell, List, CreditCard, UserSquare,
   Wrench, GitBranch, DatabaseZap, FileCheck2, BarChartHorizontal
 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
@@ -160,56 +164,58 @@ export function SolutionsDetailed() {
     return (
         <section id="solutions" className="py-16 sm:py-24 bg-background">
             <div className="container mx-auto px-4 md:px-6">
-                <Tabs defaultValue="admissions" className="flex flex-col md:flex-row gap-8 lg:gap-12">
-                    <TabsList className="flex md:flex-col h-auto justify-start items-stretch w-full md:w-1/3 lg:w-1/4 bg-transparent p-0 overflow-x-auto md:overflow-x-visible">
-                        {solutionCategories.map(category => (
-                            <TabsTrigger key={category.id} value={category.id} className="flex items-start text-left justify-start gap-3 p-4 text-base data-[state=active]:bg-primary/10 data-[state=active]:shadow-none data-[state=active]:text-primary font-medium flex-shrink-0 h-full">
-                                <category.icon className="w-5 h-5 flex-shrink-0 mt-1" />
-                                {category.title}
-                            </TabsTrigger>
-                        ))}
-                    </TabsList>
-
-                    <div className="flex-1">
-                        {solutionCategories.map(category => {
-                            const image = PlaceHolderImages.find(p => p.id === `solution-${category.id}`);
-                            return (
-                            <TabsContent key={category.id} value={category.id} className="m-0">
-                                <Card className="shadow-lg border-primary/20">
-                                    <CardHeader>
-                                        <CardTitle className="text-2xl font-bold flex items-center gap-3 text-primary">
-                                            <category.icon className="w-7 h-7" />
-                                            {category.title}
-                                        </CardTitle>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <div className="grid md:grid-cols-2 gap-8 items-start">
-                                            <ul className="grid grid-cols-1 gap-y-4">
-                                                {category.features.map(feature => (
-                                                    <li key={feature.text} className="flex items-start gap-3">
-                                                        <feature.icon className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                                                        <span className="text-muted-foreground text-base">{feature.text}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                            {image && (
-                                                <div className="relative aspect-[4/3] rounded-lg overflow-hidden border self-center">
-                                                    <Image
-                                                        src={image.imageUrl}
-                                                        alt={image.description}
-                                                        fill
-                                                        className="object-cover"
-                                                        data-ai-hint={image.imageHint}
-                                                    />
-                                                </div>
-                                            )}
+                 <div className="text-center max-w-3xl mx-auto mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                        Our Core Solutions
+                    </h2>
+                    <p className="mt-4 text-lg text-muted-foreground">
+                        We offer a comprehensive suite of modular solutions that can be tailored to meet the unique needs of your institution.
+                    </p>
+                </div>
+                <Accordion type="single" collapsible defaultValue="admissions" className="w-full max-w-5xl mx-auto">
+                    {solutionCategories.map(category => {
+                        const image = PlaceHolderImages.find(p => p.id === `solution-${category.id}`);
+                        return (
+                            <AccordionItem key={category.id} value={category.id} className="border-b">
+                                <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6">
+                                    <div className="flex items-center gap-4 text-left">
+                                        <div className="bg-primary/10 p-3 rounded-full">
+                                            <category.icon className="w-6 h-6 text-primary" />
                                         </div>
-                                    </CardContent>
-                                </Card>
-                            </TabsContent>
-                        )})}
-                    </div>
-                </Tabs>
+                                        <span>{category.title}</span>
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start pt-4 pb-8">
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-y-4 gap-x-6">
+                                            {category.features.map(feature => (
+                                                <li key={feature.text} className="flex items-start gap-3">
+                                                    <feature.icon className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                                                    <span className="text-muted-foreground text-base">{feature.text}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        {image ? (
+                                            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border self-center shadow-md">
+                                                <Image
+                                                    src={image.imageUrl}
+                                                    alt={image.description}
+                                                    fill
+                                                    className="object-cover"
+                                                    data-ai-hint={image.imageHint}
+                                                />
+                                            </div>
+                                        ) : (
+                                            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border self-center bg-muted flex items-center justify-center">
+                                               <p className="text-muted-foreground">Image coming soon</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                </AccordionContent>
+                            </AccordionItem>
+                        )
+                    })}
+                </Accordion>
             </div>
         </section>
     );

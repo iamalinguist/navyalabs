@@ -1,6 +1,5 @@
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { Hero } from "@/components/sections/hero";
 import { SolutionsOverview } from "@/components/sections/solutions-overview";
 import { SolutionsDetailed } from "@/components/sections/solutions-detailed";
 import { Process } from "@/components/sections/process";
@@ -15,9 +14,8 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <SolutionsOverview />
-        <Hero />
-        <Differentiators />
         <SolutionsDetailed />
+        <Differentiators />
         <Impact />
         <Process />
         <Leadership />
