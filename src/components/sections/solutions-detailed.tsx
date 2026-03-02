@@ -186,8 +186,8 @@ export function SolutionsDetailed() {
                                     </div>
                                 </AccordionTrigger>
                                 <AccordionContent>
-                                    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start pt-4 pb-8">
-                                        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-6">
+                                    <div className="grid md:grid-cols-5 gap-8 lg:gap-12 items-start pt-4 pb-8">
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 md:col-span-3">
                                             {category.features.map(feature => (
                                                 <li key={feature.text} className="flex items-start gap-3">
                                                     <feature.icon className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
@@ -196,7 +196,7 @@ export function SolutionsDetailed() {
                                             ))}
                                         </ul>
                                         {image ? (
-                                            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border self-center shadow-md">
+                                            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border self-center shadow-md md:col-span-2">
                                                 <Image
                                                     src={image.imageUrl}
                                                     alt={image.description}
@@ -206,7 +206,7 @@ export function SolutionsDetailed() {
                                                 />
                                             </div>
                                         ) : (
-                                            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border self-center bg-muted/50 flex items-center justify-center">
+                                            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border self-center bg-muted/50 flex items-center justify-center md:col-span-2">
                                                <p className="text-muted-foreground">Image coming soon</p>
                                             </div>
                                         )}
