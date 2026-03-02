@@ -35,7 +35,7 @@ export function Leadership() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
           {leadershipProfiles.map(profile => (
-            <Card key={profile.name} className="overflow-hidden bg-card/80 shadow-lg border-border/50">
+            <Card key={profile.name} className="overflow-hidden bg-card shadow-lg border">
                 <CardHeader className="flex flex-col sm:flex-row items-center gap-6 p-6">
                     {profile.image && (
                       <div className="relative w-32 h-32 rounded-full overflow-hidden flex-shrink-0 border-4 border-background shadow-md">
