@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { cn } from '@/lib/utils';
 
 const leadershipProfiles = [
   {
@@ -13,11 +14,11 @@ const leadershipProfiles = [
     phone: '7987876701'
   },
   {
-    name: 'Mr. Esh Rathod',
+    name: 'Mr. Murari Manav',
     title: 'Co-Founder & CTO',
     catchphrase: 'Techy code ninza',
-    image: PlaceHolderImages.find(p => p.id === 'esh-rathod'),
-    bio: 'Alumnus of IIT Bombay. Specializes in technology architecture and large-scale platform development. He leads product design, technical innovation, and system reliability, building secure, enterprise-grade solutions.',
+    image: PlaceHolderImages.find(p => p.id === 'murari-manav'),
+    bio: 'Alumnus of IIT (BHU) Varanasi. Specializes in technology architecture and large-scale platform development. He leads product design, technical innovation, and system reliability, building secure, enterprise-grade solutions.',
   }
 ];
 
@@ -43,7 +44,7 @@ export function Leadership() {
                           src={profile.image.imageUrl}
                           alt={profile.image.description}
                           fill
-                          className="object-cover"
+                          className={cn("object-cover", profile.name === 'Mr. Murari Manav' && 'grayscale')}
                           data-ai-hint={profile.image.imageHint}
                         />
                       </div>
