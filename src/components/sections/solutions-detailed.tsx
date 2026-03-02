@@ -164,19 +164,19 @@ export function SolutionsDetailed() {
     return (
         <section id="solutions" className="py-16 sm:py-24 bg-background">
             <div className="container mx-auto px-4 md:px-6">
-                 <div className="text-center max-w-3xl mx-auto mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                        Our Core Solutions
-                    </h2>
-                    <p className="mt-4 text-lg text-muted-foreground">
-                        We offer a comprehensive suite of modular solutions that can be tailored to meet the unique needs of your institution.
+                <div className="text-center max-w-4xl mx-auto mb-16">
+                    <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">
+                        An End-to-End Academic Technology Provider
+                    </h1>
+                    <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                        From admissions to accreditation, Navya Labs offers a comprehensive suite of modular and integrated solutions to digitize your entire institution.
                     </p>
                 </div>
                 <Accordion type="single" collapsible defaultValue="admissions" className="w-full max-w-5xl mx-auto">
                     {solutionCategories.map(category => {
                         const image = PlaceHolderImages.find(p => p.id === `solution-${category.id}`);
                         return (
-                            <AccordionItem key={category.id} value={category.id} className="border-b">
+                            <AccordionItem key={category.id} value={category.id} className="border-b-2 border-border/50">
                                 <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6">
                                     <div className="flex items-center gap-4 text-left">
                                         <div className="bg-primary/10 p-3 rounded-full">
@@ -187,7 +187,7 @@ export function SolutionsDetailed() {
                                 </AccordionTrigger>
                                 <AccordionContent>
                                     <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start pt-4 pb-8">
-                                        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-y-4 gap-x-6">
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-6">
                                             {category.features.map(feature => (
                                                 <li key={feature.text} className="flex items-start gap-3">
                                                     <feature.icon className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
@@ -206,7 +206,7 @@ export function SolutionsDetailed() {
                                                 />
                                             </div>
                                         ) : (
-                                            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border self-center bg-muted flex items-center justify-center">
+                                            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border self-center bg-muted/50 flex items-center justify-center">
                                                <p className="text-muted-foreground">Image coming soon</p>
                                             </div>
                                         )}

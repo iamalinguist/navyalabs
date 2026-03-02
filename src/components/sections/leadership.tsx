@@ -1,26 +1,30 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Linkedin } from 'lucide-react';
+import { Linkedin, Mail, Phone } from 'lucide-react';
 
 const leadershipProfiles = [
   {
     name: 'Vivek Tripathi',
     title: 'Co-Founder & CEO',
     image: PlaceHolderImages.find(p => p.id === 'vivek-tripathi'),
-    bio: 'Alumnus of IIT Bombay and IIT (BHU) Varanasi. Specializes in consulting, institutional strategy, and academic transformation. He focuses on aligning technology with institutional goals, governance, and long-term scalability.'
+    bio: 'Alumnus of IIT Bombay and IIT (BHU) Varanasi. Specializes in consulting, institutional strategy, and academic transformation. He focuses on aligning technology with institutional goals, governance, and long-term scalability.',
+    email: 'sopan.tripathi@gmail.com',
+    phone: '7987876701'
   },
   {
     name: 'Dinesh Rathod',
     title: 'Co-Founder & CTO',
     image: PlaceHolderImages.find(p => p.id === 'dinesh-rathod'),
-    bio: 'Alumnus of IIT Bombay. Specializes in technology architecture and large-scale platform development. He leads product design, technical innovation, and system reliability, building secure, enterprise-grade solutions.'
+    bio: 'Alumnus of IIT Bombay. Specializes in technology architecture and large-scale platform development. He leads product design, technical innovation, and system reliability, building secure, enterprise-grade solutions.',
+    email: '7rathod7@gmail.com',
+    phone: '7045800407'
   }
 ];
 
 export function Leadership() {
   return (
-    <section id="leadership" className="py-16 sm:py-24 bg-secondary/50">
+    <section id="leadership" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -32,7 +36,7 @@ export function Leadership() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
           {leadershipProfiles.map(profile => (
-            <Card key={profile.name} className="overflow-hidden bg-card shadow-lg">
+            <Card key={profile.name} className="overflow-hidden bg-card shadow-lg border-border/50">
                 <CardHeader className="flex flex-col sm:flex-row items-center gap-6 p-6">
                     {profile.image && (
                       <div className="relative w-32 h-32 rounded-full overflow-hidden flex-shrink-0 border-4 border-background shadow-md">
@@ -48,9 +52,17 @@ export function Leadership() {
                     <div className="text-center sm:text-left">
                         <CardTitle className="text-2xl">{profile.name}</CardTitle>
                         <CardDescription className="text-primary font-medium">{profile.title}</CardDescription>
-                         <a href="#" aria-label={`${profile.name} on LinkedIn`} className="text-muted-foreground hover:text-primary mt-2 inline-block">
-                           <Linkedin className="w-5 h-5"/>
-                         </a>
+                         <div className="flex gap-4 mt-3 justify-center sm:justify-start">
+                            <a href={`mailto:${profile.email}`} aria-label={`${profile.name}'s Email`} className="text-muted-foreground hover:text-primary transition-colors">
+                               <Mail className="w-5 h-5"/>
+                            </a>
+                            <a href={`tel:${profile.phone}`} aria-label={`${profile.name}'s Phone`} className="text-muted-foreground hover:text-primary transition-colors">
+                               <Phone className="w-5 h-5"/>
+                            </a>
+                            <a href="#" aria-label={`${profile.name} on LinkedIn`} className="text-muted-foreground hover:text-primary transition-colors">
+                               <Linkedin className="w-5 h-5"/>
+                            </a>
+                         </div>
                     </div>
                 </CardHeader>
                 <CardContent className="p-6 pt-0">
