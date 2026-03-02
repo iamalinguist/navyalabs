@@ -206,11 +206,11 @@ export function SolutionsDetailed() {
                                                 </li>
                                             ))}
                                         </ul>
-                                        <div className="mt-8">
+                                        <div className="mt-8 text-center">
                                             {category.sampleWorkUrl ? (
-                                                <Button asChild variant="outline">
+                                                <Button asChild>
                                                     <a href={category.sampleWorkUrl} target="_blank" rel="noopener noreferrer">
-                                                        Sample Work <ExternalLink className="ml-2" />
+                                                        View Sample Work <ExternalLink />
                                                     </a>
                                                 </Button>
                                             ) : (
