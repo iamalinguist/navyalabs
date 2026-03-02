@@ -5,7 +5,7 @@ import { Linkedin, Mail, Phone } from 'lucide-react';
 
 const leadershipProfiles = [
   {
-    name: 'Vivek Tripathi',
+    name: 'Dr. Vivek Tripathi',
     title: 'Co-Founder & CEO',
     image: PlaceHolderImages.find(p => p.id === 'vivek-tripathi'),
     bio: 'Alumnus of IIT Bombay and IIT (BHU) Varanasi. Specializes in consulting, institutional strategy, and academic transformation. He focuses on aligning technology with institutional goals, governance, and long-term scalability.',
@@ -13,7 +13,7 @@ const leadershipProfiles = [
     phone: '7987876701'
   },
   {
-    name: 'Dinesh Rathod',
+    name: 'Mr. Dinesh Rathod',
     title: 'Co-Founder & CTO',
     image: PlaceHolderImages.find(p => p.id === 'dinesh-rathod'),
     bio: 'Alumnus of IIT Bombay. Specializes in technology architecture and large-scale platform development. He leads product design, technical innovation, and system reliability, building secure, enterprise-grade solutions.',

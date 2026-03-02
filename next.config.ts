@@ -28,6 +28,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'iamalinguist.github.io',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
