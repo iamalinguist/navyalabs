@@ -15,7 +15,7 @@ const leadershipProfiles = [
   {
     name: 'Mr. Esh Rathod',
     title: 'Co-Founder & CTO',
-    catchphrase: 'Techy Code Ninja',
+    catchphrase: 'Techy code ninza',
     image: PlaceHolderImages.find(p => p.id === 'esh-rathod'),
     bio: 'Alumnus of IIT Bombay. Specializes in technology architecture and large-scale platform development. He leads product design, technical innovation, and system reliability, building secure, enterprise-grade solutions.',
   }
@@ -23,7 +23,7 @@ const leadershipProfiles = [
 
 export function Leadership() {
   return (
-    <section id="leadership" className="py-16 sm:py-24 bg-background">
+    <section id="leadership" className="py-16 sm:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -35,7 +35,7 @@ export function Leadership() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
           {leadershipProfiles.map(profile => (
-            <Card key={profile.name} className="overflow-hidden bg-card shadow-lg border-border/50">
+            <Card key={profile.name} className="overflow-hidden bg-card/80 shadow-lg border-border/50">
                 <CardHeader className="flex flex-col sm:flex-row items-center gap-6 p-6">
                     {profile.image && (
                       <div className="relative w-32 h-32 rounded-full overflow-hidden flex-shrink-0 border-4 border-background shadow-md">
