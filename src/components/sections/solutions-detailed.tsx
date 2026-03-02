@@ -13,6 +13,8 @@ import {
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
+import { Separator } from '@/components/ui/separator';
+import React from 'react';
 
 const solutionCategories = [
     {
@@ -168,47 +170,50 @@ export function SolutionsDetailed() {
                     </p>
                 </div>
                 
-                <div className="space-y-20 max-w-6xl mx-auto">
+                <div className="max-w-6xl mx-auto">
                     {solutionCategories.map((category, index) => {
                         const image = PlaceHolderImages.find(p => p.id === `solution-${category.id}`);
                         const isReversed = index % 2 !== 0;
 
                         return (
-                            <div key={category.id} className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-16 items-center">
-                                <div className={cn("md:col-span-3", isReversed && 'md:order-last')}>
-                                    <div className="flex items-center gap-4 mb-4">
-                                        <div className="bg-primary/10 p-3 rounded-full">
-                                            <category.icon className="w-7 h-7 text-primary" />
+                            <React.Fragment key={category.id}>
+                                {index > 0 && <Separator className="my-20" />}
+                                <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-16 items-center">
+                                    <div className={cn("md:col-span-3", isReversed && 'md:order-last')}>
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="bg-primary/10 p-3 rounded-full">
+                                                <category.icon className="w-7 h-7 text-primary" />
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-foreground">{category.title}</h3>
                                         </div>
-                                        <h3 className="text-2xl font-bold text-foreground">{category.title}</h3>
-                                    </div>
 
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 mt-6">
-                                        {category.features.map(feature => (
-                                            <li key={feature.text} className="flex items-start gap-3">
-                                                <feature.icon className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                                                <span className="text-muted-foreground">{feature.text}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 mt-6">
+                                            {category.features.map(feature => (
+                                                <li key={feature.text} className="flex items-start gap-3">
+                                                    <feature.icon className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                                                    <span className="text-muted-foreground">{feature.text}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    
+                                    <div className={cn('md:col-span-2 relative aspect-square rounded-lg overflow-hidden border shadow-lg', isReversed && 'md:order-first')}>
+                                        {image ? (
+                                            <Image
+                                                src={image.imageUrl}
+                                                alt={image.description}
+                                                fill
+                                                className="object-cover"
+                                                data-ai-hint={image.imageHint}
+                                            />
+                                        ) : (
+                                            <div className="bg-muted/50 flex items-center justify-center w-full h-full">
+                                                <p className="text-muted-foreground">Image coming soon</p>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
-                                
-                                <div className={cn('md:col-span-2 relative aspect-square rounded-lg overflow-hidden border shadow-lg', isReversed && 'md:order-first')}>
-                                    {image ? (
-                                        <Image
-                                            src={image.imageUrl}
-                                            alt={image.description}
-                                            fill
-                                            className="object-cover"
-                                            data-ai-hint={image.imageHint}
-                                        />
-                                    ) : (
-                                        <div className="bg-muted/50 flex items-center justify-center w-full h-full">
-                                            <p className="text-muted-foreground">Image coming soon</p>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
+                            </React.Fragment>
                         )
                     })}
                 </div>
