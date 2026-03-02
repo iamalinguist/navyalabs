@@ -10,14 +10,9 @@ import {
   Bell, List, CreditCard, UserSquare,
   Wrench, GitBranch, DatabaseZap, FileCheck2, BarChartHorizontal
 } from 'lucide-react';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { cn } from '@/lib/utils';
 
 const solutionCategories = [
     {
@@ -165,57 +160,58 @@ export function SolutionsDetailed() {
         <section id="solutions" className="py-16 sm:py-24">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-4xl mx-auto mb-16">
-                    <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">
+                    <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground">
                         An End-to-End Academic Technology Provider
                     </h1>
                     <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
                         From admissions to accreditation, Navya Labs offers a comprehensive suite of modular and integrated solutions to digitize your entire institution.
                     </p>
                 </div>
-                <Accordion type="single" collapsible defaultValue="admissions" className="w-full max-w-5xl mx-auto">
-                    {solutionCategories.map(category => {
+                
+                <div className="space-y-20 max-w-6xl mx-auto">
+                    {solutionCategories.map((category, index) => {
                         const image = PlaceHolderImages.find(p => p.id === `solution-${category.id}`);
+                        const isReversed = index % 2 !== 0;
+
                         return (
-                            <AccordionItem key={category.id} value={category.id} className="border-b-2 border-border/50">
-                                <AccordionTrigger className="text-lg font-semibold hover:no-underline py-6">
-                                    <div className="flex items-center gap-4 text-left">
+                            <div key={category.id} className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+                                <div className={cn(isReversed && 'md:order-last')}>
+                                    <div className="flex items-center gap-4 mb-4">
                                         <div className="bg-primary/10 p-3 rounded-full">
-                                            <category.icon className="w-6 h-6 text-primary" />
+                                            <category.icon className="w-7 h-7 text-primary" />
                                         </div>
-                                        <span>{category.title}</span>
+                                        <h3 className="text-2xl font-bold text-foreground">{category.title}</h3>
                                     </div>
-                                </AccordionTrigger>
-                                <AccordionContent>
-                                    <div className="grid md:grid-cols-5 gap-8 lg:gap-12 items-start pt-4 pb-8">
-                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 md:col-span-3">
-                                            {category.features.map(feature => (
-                                                <li key={feature.text} className="flex items-start gap-3">
-                                                    <feature.icon className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
-                                                    <span className="text-muted-foreground text-base">{feature.text}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                        {image ? (
-                                            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border self-center shadow-md md:col-span-2">
-                                                <Image
-                                                    src={image.imageUrl}
-                                                    alt={image.description}
-                                                    fill
-                                                    className="object-cover"
-                                                    data-ai-hint={image.imageHint}
-                                                />
-                                            </div>
-                                        ) : (
-                                            <div className="relative aspect-[4/3] rounded-lg overflow-hidden border self-center bg-muted/50 flex items-center justify-center md:col-span-2">
-                                               <p className="text-muted-foreground">Image coming soon</p>
-                                            </div>
-                                        )}
-                                    </div>
-                                </AccordionContent>
-                            </AccordionItem>
+
+                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 mt-6">
+                                        {category.features.map(feature => (
+                                            <li key={feature.text} className="flex items-start gap-3">
+                                                <feature.icon className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                                                <span className="text-muted-foreground">{feature.text}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                
+                                <div className={cn('relative aspect-[5/4] rounded-lg overflow-hidden border shadow-lg', isReversed && 'md:order-first')}>
+                                    {image ? (
+                                        <Image
+                                            src={image.imageUrl}
+                                            alt={image.description}
+                                            fill
+                                            className="object-cover"
+                                            data-ai-hint={image.imageHint}
+                                        />
+                                    ) : (
+                                        <div className="bg-muted/50 flex items-center justify-center w-full h-full">
+                                            <p className="text-muted-foreground">Image coming soon</p>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
                         )
                     })}
-                </Accordion>
+                </div>
             </div>
         </section>
     );
