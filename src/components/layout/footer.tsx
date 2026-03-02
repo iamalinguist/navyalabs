@@ -1,5 +1,4 @@
 import { Logo } from "@/components/logo";
-import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
@@ -27,11 +26,6 @@ export function Footer() {
                             <p>For general queries:</p>
                             <p>Email: <a href="mailto:sopan.tripathi@gmail.com" className="hover:text-primary">sopan.tripathi@gmail.com</a></p>
                             <p>Phone: <a href="tel:7987876701" className="hover:text-primary">7987876701</a></p>
-                            <div className="flex space-x-4 mt-4">
-                                <a href="#" className="text-muted-foreground hover:text-primary"><Twitter className="h-5 w-5" /></a>
-                                <a href="#" className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></a>
-                                <a href="#" className="text-muted-foreground hover:text-primary"><Github className="h-5 w-5" /></a>
-                            </div>
                         </div>
                     </div>
                 </div>
