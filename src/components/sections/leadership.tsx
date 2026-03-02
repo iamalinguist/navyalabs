@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Linkedin, Mail, Phone } from 'lucide-react';
 
 const leadershipProfiles = [
   {
     name: 'Dr. Vivek Tripathi',
     title: 'Co-Founder & CEO',
+    catchphrase: 'Visionary and Consultant',
     image: PlaceHolderImages.find(p => p.id === 'vivek-tripathi'),
     bio: 'Alumnus of IIT Bombay and IIT (BHU) Varanasi. Specializes in consulting, institutional strategy, and academic transformation. He focuses on aligning technology with institutional goals, governance, and long-term scalability.',
     email: 'sopan.tripathi@gmail.com',
@@ -15,6 +15,7 @@ const leadershipProfiles = [
   {
     name: 'Mr. Esh Rathod',
     title: 'Co-Founder & CTO',
+    catchphrase: 'Techy Code Ninja',
     image: PlaceHolderImages.find(p => p.id === 'esh-rathod'),
     bio: 'Alumnus of IIT Bombay. Specializes in technology architecture and large-scale platform development. He leads product design, technical innovation, and system reliability, building secure, enterprise-grade solutions.',
   }
@@ -50,19 +51,9 @@ export function Leadership() {
                     <div className="text-center sm:text-left">
                         <CardTitle className="text-2xl">{profile.name}</CardTitle>
                         <CardDescription className="text-primary font-medium">{profile.title}</CardDescription>
-                         {profile.email && profile.phone && (
-                            <div className="flex gap-4 mt-3 justify-center sm:justify-start">
-                                <a href={`mailto:${profile.email}`} aria-label={`${profile.name}'s Email`} className="text-muted-foreground hover:text-primary transition-colors">
-                                   <Mail className="w-5 h-5"/>
-                                </a>
-                                <a href={`tel:${profile.phone}`} aria-label={`${profile.name}'s Phone`} className="text-muted-foreground hover:text-primary transition-colors">
-                                   <Phone className="w-5 h-5"/>
-                                </a>
-                                <a href="#" aria-label={`${profile.name} on LinkedIn`} className="text-muted-foreground hover:text-primary transition-colors">
-                                   <Linkedin className="w-5 h-5"/>
-                                </a>
-                            </div>
-                         )}
+                        {profile.catchphrase && (
+                            <p className="text-sm text-muted-foreground mt-2 italic">"{profile.catchphrase}"</p>
+                        )}
                     </div>
                 </CardHeader>
                 <CardContent className="p-6 pt-0">
