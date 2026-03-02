@@ -24,13 +24,13 @@ const solutionCategories = [
         icon: Users,
         sampleWorkUrl: "",
         features: [
-            { icon: UserPlus, text: "Online application portals" },
-            { icon: FileUp, text: "Document upload & verification" },
-            { icon: ListChecks, text: "Merit list generation" },
-            { icon: Award, text: "Counseling and seat allocation" },
-            { icon: Banknote, text: "Fee payment integration" },
-            { icon: LayoutDashboard, text: "Student onboarding dashboards" },
-            { icon: MonitorSmartphone, text: "Multi-program admission handling" },
+            { text: "Online application portals" },
+            { text: "Document upload & verification" },
+            { text: "Merit list generation" },
+            { text: "Counseling and seat allocation" },
+            { text: "Fee payment integration" },
+            { text: "Student onboarding dashboards" },
+            { text: "Multi-program admission handling" },
         ]
     },
     {
@@ -39,15 +39,15 @@ const solutionCategories = [
         icon: GraduationCap,
         sampleWorkUrl: "",
         features: [
-            { icon: CalendarCheck, text: "Attendance management" },
-            { icon: ClipboardEdit, text: "Internal marks & grading" },
-            { icon: Clock, text: "Timetable scheduling" },
-            { icon: Banknote, text: "Fee management" },
-            { icon: BookUser, text: "Staff management" },
-            { icon: Home, text: "Hostel management" },
-            { icon: Truck, text: "Transport tracking" },
-            { icon: IdCard, text: "ID card generation" },
-            { icon: Users, text: "Student information systems" },
+            { text: "Attendance management" },
+            { text: "Internal marks & grading" },
+            { text: "Timetable scheduling" },
+            { text: "Fee management" },
+            { text: "Staff management" },
+            { text: "Hostel management" },
+            { text: "Transport tracking" },
+            { text: "ID card generation" },
+            { text: "Student information systems" },
         ]
     },
     {
@@ -56,14 +56,14 @@ const solutionCategories = [
         icon: Presentation,
         sampleWorkUrl: "https://facultyideas.web.app/",
         features: [
-            { icon: Globe, text: "Academic conference websites" },
-            { icon: FileText, text: "Paper submission & review workflows" },
-            { icon: Mail, text: "Reviewer assignment tools" },
-            { icon: UserPlus, text: "Registration and payment systems" },
-            { icon: Award, text: "Certificate generation" },
-            { icon: QrCode, text: "QR-based check-in" },
-            { icon: Book, text: "Abstract book creation" },
-            { icon: FileArchive, text: "Proceedings management" },
+            { text: "Academic conference websites" },
+            { text: "Paper submission & review workflows" },
+            { text: "Reviewer assignment tools" },
+            { text: "Registration and payment systems" },
+            { text: "Certificate generation" },
+            { text: "QR-based check-in" },
+            { text: "Abstract book creation" },
+            { text: "Proceedings management" },
         ]
     },
     {
@@ -72,13 +72,13 @@ const solutionCategories = [
         icon: FilePenLine,
         sampleWorkUrl: "",
         features: [
-            { icon: ClipboardEdit, text: "Internal exam management" },
-            { icon: Database, text: "Question bank systems" },
-            { icon: Laptop, text: "Online examinations" },
-            { icon: FileText, text: "Marks entry portals" },
-            { icon: Calculator, text: "Result processing automation" },
-            { icon: Ticket, text: "Hall ticket generation" },
-            { icon: Award, text: "Grade cards & OMR integration" },
+            { text: "Internal exam management" },
+            { text: "Question bank systems" },
+            { text: "Online examinations" },
+            { text: "Marks entry portals" },
+            { text: "Result processing automation" },
+            { text: "Hall ticket generation" },
+            { text: "Grade cards & OMR integration" },
         ]
     },
     {
@@ -87,12 +87,12 @@ const solutionCategories = [
         icon: ShieldCheck,
         sampleWorkUrl: "",
         features: [
-            { icon: FolderKanban, text: "Criterion-wise document repositories" },
-            { icon: Target, text: "Evidence tracking" },
-            { icon: BarChart3, text: "Data analytics dashboards" },
-            { icon: FilePieChart, text: "Annual report generation" },
-            { icon: BookCopy, text: "Self-study report support" },
-            { icon: ShieldCheck, text: "Compliance monitoring tools" },
+            { text: "Criterion-wise document repositories" },
+            { text: "Evidence tracking" },
+            { text: "Data analytics dashboards" },
+            { text: "Annual report generation" },
+            { text: "Self-study report support" },
+            { text: "Compliance monitoring tools" },
         ]
     },
     {
@@ -101,12 +101,12 @@ const solutionCategories = [
         icon: Library,
         sampleWorkUrl: "",
         features: [
-            { icon: Layers, text: "Lightweight LMS platforms" },
-            { icon: UploadCloud, text: "Assignment submission portals" },
-            { icon: FolderKanban, text: "Faculty resource repositories" },
-            { icon: Target, text: "Course outcome tracking" },
-            { icon: Laptop, text: "Lecture capture systems" },
-            { icon: Link2, text: "Integration with existing LMS" },
+            { text: "Lightweight LMS platforms" },
+            { text: "Assignment submission portals" },
+            { text: "Faculty resource repositories" },
+            { text: "Course outcome tracking" },
+            { text: "Lecture capture systems" },
+            { text: "Integration with existing LMS" },
         ]
     },
     {
@@ -115,12 +115,12 @@ const solutionCategories = [
         icon: FlaskConical,
         sampleWorkUrl: "",
         features: [
-            { icon: UserCog, text: "Faculty profile platforms" },
-            { icon: Book, text: "Publication tracking" },
-            { icon: CircleDollarSign, text: "Grant management" },
-            { icon: Microscope, text: "Lab and equipment booking" },
-            { icon: FileText, text: "Consultancy project tracking" },
-            { icon: TrendingUp, text: "Research analytics dashboards" },
+            { text: "Faculty profile platforms" },
+            { text: "Publication tracking" },
+            { text: "Grant management" },
+            { text: "Lab and equipment booking" },
+            { text: "Consultancy project tracking" },
+            { text: "Research analytics dashboards" },
         ]
     },
     {
@@ -129,12 +129,12 @@ const solutionCategories = [
         icon: Globe,
         sampleWorkUrl: "",
         features: [
-            { icon: MonitorSmartphone, text: "Modern responsive websites" },
-            { icon: Library, text: "Department microsites" },
-            { icon: Fingerprint, text: "Accessibility compliance" },
-            { icon: Search, text: "SEO optimization" },
-            { icon: Languages, text: "Multilingual support" },
-            { icon: Route, text: "Virtual campus tours" },
+            { text: "Modern responsive websites" },
+            { text: "Department microsites" },
+            { text: "Accessibility compliance" },
+            { text: "SEO optimization" },
+            { text: "Multilingual support" },
+            { text: "Virtual campus tours" },
         ]
     },
     {
@@ -143,13 +143,13 @@ const solutionCategories = [
         icon: MonitorSmartphone,
         sampleWorkUrl: "",
         features: [
-            { icon: CalendarCheck, text: "Attendance access" },
-            { icon: Clock, text: "Timetables" },
-            { icon: Bell, text: "Notifications" },
-            { icon: CreditCard, text: "Fee status tracking" },
-            { icon: List, text: "Event updates" },
-            { icon: UserSquare, text: "Digital ID cards" },
-            { icon: Layers, text: "Student services integration" },
+            { text: "Attendance access" },
+            { text: "Timetables" },
+            { text: "Notifications" },
+            { text: "Fee status tracking" },
+            { text: "Event updates" },
+            { text: "Digital ID cards" },
+            { text: "Student services integration" },
         ]
     },
     {
@@ -158,12 +158,12 @@ const solutionCategories = [
         icon: Wrench,
         sampleWorkUrl: "",
         features: [
-            { icon: GitBranch, text: "Workflow automation" },
-            { icon: DatabaseZap, text: "Data migration from legacy systems" },
-            { icon: Link2, text: "API integrations" },
-            { icon: FileCheck2, text: "Document approval systems" },
-            { icon: BarChartHorizontal, text: "Analytics dashboards" },
-            { icon: Wrench, text: "Tailored institutional software" },
+            { text: "Workflow automation" },
+            { text: "Data migration from legacy systems" },
+            { text: "API integrations" },
+            { text: "Document approval systems" },
+            { text: "Analytics dashboards" },
+            { text: "Tailored institutional software" },
         ]
     }
 ];
@@ -199,18 +199,18 @@ export function SolutionsDetailed() {
                                         </div>
 
                                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 mt-6">
-                                            {category.features.map(feature => (
+                                            {category.features.map((feature, featureIndex) => (
                                                 <li key={feature.text} className="flex items-start gap-3">
-                                                    <feature.icon className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                                                    <span className="font-bold text-primary w-5 shrink-0 text-right">{featureIndex + 1}.</span>
                                                     <span className="text-muted-foreground">{feature.text}</span>
                                                 </li>
                                             ))}
                                         </ul>
-                                        <div className="mt-6">
+                                        <div className="mt-8">
                                             {category.sampleWorkUrl ? (
                                                 <Button asChild variant="outline">
                                                     <a href={category.sampleWorkUrl} target="_blank" rel="noopener noreferrer">
-                                                        Sample Work <ExternalLink />
+                                                        Sample Work <ExternalLink className="ml-2" />
                                                     </a>
                                                 </Button>
                                             ) : (
