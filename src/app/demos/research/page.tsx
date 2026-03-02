@@ -217,14 +217,14 @@ export default function ResearchDashboardPage() {
                   <TableBody>
                     {facultyMembers.map((faculty) => (
                       <TableRow key={faculty.email}>
-                        <TableCell>
+                        <TableCell className="align-top">
                           <div className="font-medium">{faculty.name}</div>
                           <div className="hidden text-sm text-muted-foreground md:inline">
                             {faculty.email}
                           </div>
                         </TableCell>
-                        <TableCell>{faculty.department}</TableCell>
-                        <TableCell className="text-right">{faculty.publications}</TableCell>
+                        <TableCell className="align-top">{faculty.department}</TableCell>
+                        <TableCell className="text-right align-top">{faculty.publications}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
@@ -249,11 +249,11 @@ export default function ResearchDashboardPage() {
                   <TableBody>
                     {recentPublications.map((pub, index) => (
                       <TableRow key={index}>
-                        <TableCell>
+                        <TableCell className="align-top">
                           <div className="font-medium">{pub.title}</div>
                           <div className="text-sm text-muted-foreground">{pub.authors} - <i>{pub.journal}</i></div>
                         </TableCell>
-                        <TableCell className="text-right text-muted-foreground">{pub.date}</TableCell>
+                        <TableCell className="text-right text-muted-foreground align-top">{pub.date}</TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
