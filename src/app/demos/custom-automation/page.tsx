@@ -24,7 +24,7 @@ export default function AutomationDemoPage() {
                 <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
                     <Logo />
                      <Button asChild>
-                        <Link href="/">Back to Main Site</Link>
+                        <Link href="/#custom">Back to Main Site</Link>
                      </Button>
                 </div>
             </header>

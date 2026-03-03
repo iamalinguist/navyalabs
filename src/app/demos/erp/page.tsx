@@ -157,7 +157,7 @@ export default function ErpDashboardPage() {
                  <ChevronDown className="h-4 w-4 text-muted-foreground" />
             </div>
              <Button asChild variant="outline">
-                <Link href="/">Back to Main Site</Link>
+                <Link href="/#erp">Back to Main Site</Link>
              </Button>
           </div>
         </header>

@@ -23,7 +23,7 @@ export default function UniversityDemoPage() {
                         <Link href="#contact" className="transition-colors hover:text-primary">Contact</Link>
                     </nav>
                      <Button asChild>
-                        <Link href="/">Back to Main Site</Link>
+                        <Link href="/#websites">Back to Main Site</Link>
                      </Button>
                 </div>
             </header>

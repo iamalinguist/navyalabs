@@ -146,7 +146,7 @@ export function SolutionsDetailed() {
                         return (
                             <React.Fragment key={category.id}>
                                 {index > 0 && <Separator className="my-20" />}
-                                <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-16 items-center">
+                                <div id={category.id} className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-16 items-center scroll-mt-24">
                                     <div className={cn("md:col-span-3", isReversed && 'md:order-last')}>
                                         <div className="flex items-center gap-4 mb-4">
                                             <div className="bg-primary/10 p-3 rounded-full">
