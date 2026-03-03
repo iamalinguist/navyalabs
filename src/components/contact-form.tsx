@@ -10,11 +10,11 @@ export function ContactForm() {
     <form action="https://formsubmit.co/sopan.tripathi@gmail.com" method="POST" className="space-y-4">
       <div className="space-y-2">
         <Label htmlFor="name">Full Name</Label>
-        <Input id="name" type="text" name="name" placeholder="John Doe" required />
+        <Input id="name" type="text" name="name" placeholder="firstname lastname" required />
       </div>
       <div className="space-y-2">
         <Label htmlFor="email">Email</Label>
-        <Input id="email" type="email" name="email" placeholder="john.doe@university.edu" required />
+        <Input id="email" type="email" name="email" placeholder="firstname.lastname@gmail.com" required />
       </div>
       <div className="space-y-2">
         <Label htmlFor="institution">Institution</Label>
