@@ -15,15 +15,6 @@ export default function Home() {
         <Leadership />
         <Differentiators />
         <Cta />
-        {/* Hidden links for static export crawler */}
-        <div className="absolute -left-[9999px]">
-          <Link href="/demos/custom-automation">Custom Automation</Link>
-          <Link href="/demos/erp">ERP</Link>
-          <Link href="/demos/exam-solution">Exam Solution</Link>
-          <Link href="/demos/mobile-app">Mobile App</Link>
-          <Link href="/demos/research">Research</Link>
-          <Link href="/demos/university">University</Link>
-        </div>
       </main>
       <Footer />
     </div>
