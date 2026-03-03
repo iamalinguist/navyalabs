@@ -9,19 +9,19 @@
     {
       "id": "murari-manav",
       "description": "Professional headshot of Murari Manav.",
-      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYWxlJTIwcHJvZmVzc2lvbmFsJTIwaGVhZHNob3R8ZW58MHx8fHwxNzI0NTU3MTE4fDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1557862921-37829c790f19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYWxlJTIwcHJvZmVzc2lvbmFsfGVufDB8fHwxNzI0NTU3MTE4fDA&ixlib=rb-4.0.3&q=80&w=1080",
       "imageHint": "professional headshot"
     },
     {
       "id": "solution-admissions",
       "description": "A streamlined admissions portal dashboard.",
-      "imageUrl": "https://images.unsplash.com/photo-1771923082503-0a3381c46cef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkYXNoYm9hcmQlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzcyMzg1NzMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1771923082503-0a3381c46cef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkYXNoYm9hcmQlMjBpbnRlcmZhY2V8ZW58MHx8fDE3NzIzODU3MzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "dashboard interface"
     },
     {
       "id": "solution-erp",
       "description": "An integrated ERP system for a college.",
-      "imageUrl": "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxFUlAlMjBzeXN0ZW18ZW58MHx8fHwxNzcyNDI4MjEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHxFUlAlMjBzeXN0ZW18ZW58MHx8fDE3NzI0MjgyMTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "ERP system"
     },
     {
@@ -33,7 +33,7 @@
     {
       "id": "solution-exams",
       "description": "An online examination platform.",
-      "imageUrl": "https://images.unsplash.com/photo-1513258496099-48168024aec0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvbmxpbmUlMjBleGFtfGVufDB8fHx8MTc3MjQyODIxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1513258496099-48168024aec0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxvbmxpbmUlMjBleGFtfGVufDB8fHx8fDE3NzI0MjgyMTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "online exam"
     },
     {
@@ -51,13 +51,13 @@
     {
       "id": "solution-research",
       "description": "A research lab with advanced experimental equipment.",
-      "imageUrl": "https://images.unsplash.com/photo-1628802426338-40b54245f949?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlcXVpcG1lbnQlMjBsYWJ8ZW58MHx8fHwxNzI1NTM3MDk2fDA&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1526930382372-67bf22c0fce2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsYWJvcmF0b3J5JTIwZXF1aXBtZW50fGVufDB8fHx8MTc3MjU1MjU1MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "laboratory equipment"
     },
     {
       "id": "solution-websites",
       "description": "A university campus with modern architecture.",
-      "imageUrl": "https://images.unsplash.com/photo-1588621473694-585a9f2575f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwY2FtcHVzfGVufDB8fHx8MTc3MjYxODQ2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1559135197-8a45ea74d367?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1bml2ZXJzaXR5JTIwY2FtcHVzfGVufDB8fHx8MTc3MjUzMzc3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "university campus"
     },
     {
@@ -69,7 +69,7 @@
     {
       "id": "solution-custom",
       "description": "A custom workflow automation tool.",
-      "imageUrl": "https://images.unsplash.com/photo-1542744094-24638eff58bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b3JrZmxvdyUyMGF1dG9tYXRpb258ZW58MHx8fHwxNzcyMzg3NzI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1542744094-24638eff58bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHx3b3JrZmxvdyUyMGF1dG9tYXRpb258ZW58MHx8fHwxNzcyMzg3NzI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "workflow automation"
     }
   ]
