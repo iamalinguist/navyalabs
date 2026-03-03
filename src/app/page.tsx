@@ -16,7 +16,7 @@ export default function Home() {
         <Differentiators />
         <Cta />
         {/* Hidden links for static export crawler */}
-        <div className="hidden">
+        <div className="absolute -left-[9999px]" aria-hidden="true">
           <Link href="/demos/custom-automation">Custom Automation</Link>
           <Link href="/demos/erp">ERP</Link>
           <Link href="/demos/exam-solution">Exam Solution</Link>
