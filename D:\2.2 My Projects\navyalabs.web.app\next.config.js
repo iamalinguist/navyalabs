@@ -4,11 +4,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    turbopack: {
-      root: process.cwd(),
-    },
-  },
 };
 
 module.exports = nextConfig;
